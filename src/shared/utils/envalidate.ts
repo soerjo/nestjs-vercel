@@ -1,15 +1,15 @@
-import { cleanEnv, port, str } from 'envalid';
+import { cleanEnv } from 'envalid';
 
 export const envalidate = () => {
   return cleanEnv(process.env, {
-    NODE_ENV: str({
-      choices: ['development', 'test', 'production', 'staging'],
-    }),
-    SERVICE_CODE: str(),
-    PORT: port(),
-    BASIC_AUTH_USERNAME: str(),
-    BASIC_AUTH_PASSWORD: str(),
-    FRONT_END_URL: str(),
+    // NODE_ENV: str({
+    //   choices: ['development', 'test', 'production', 'staging'],
+    // }),
+    // SERVICE_CODE: str(),
+    // PORT: port(),
+    // BASIC_AUTH_USERNAME: str(),
+    // BASIC_AUTH_PASSWORD: str(),
+    // FRONT_END_URL: str(),
     // POSTGRES_HOST: str(),
     // POSTGRES_PORT: port(),
     // POSTGRES_USERNAME: str(),

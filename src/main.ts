@@ -51,8 +51,8 @@ async function bootstrap() {
   // Disable Cache ETag
   app.disable('etag');
 
-  await app.listen(PORT);
+  await app.listen(PORT || 3000);
   // PinoLogger.root.info(`CORS : ${process.env.FRONT_END_URL.split(',')}`);
-  PinoLogger.root.info(`Service is running on port ${PORT}`);
+  PinoLogger.root.info(`Service is running on port ${PORT || 3000}`);
 }
 bootstrap();
