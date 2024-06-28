@@ -1,0 +1,31 @@
+{
+  "name": "nestjs",
+  "description": "boilerplate",
+  "author": "RM",
+  "private": true,
+  "type": "module",
+  "appName": "nestjs",
+  "productName": "boilerplate",
+  "enableLogstash": "0",
+  "fortifyExcludePath":"", 
+  "ocpConfigFile":"", 
+  "ocpCredential":"",
+  "chatNotifWebHookURL": "https://chat.googleapis.com/v1/spaces/AAAAK6E8e-c/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=BdmJ2UmWh__nNmQLyTgRw6dp0UFIc7RP9qKlH2iy_so%3D",
+  "nameSpaceProd":"support-boilerplate",
+  "nameSpaceDev":"support-boilerplate-dev",
+  "nameSpaceStg":"support-boilerplate-staging",
+  "appArtifact": 
+  {
+		"groupId": "nestjs"
+		, "id": "nestjs"
+	}
+  ,"urlIqServer" : "http://10.253.238.4:8070"
+  ,"maxcritical" : "100"
+  ,"maxsevere" : "100"
+  ,"maxmoderate" : "100" 
+  ,"publicId" : "nestjs"
+  ,"iqScanPatterns":[
+    {"scanPattern": "package.json"}
+    
+  ]
+}

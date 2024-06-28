@@ -1,0 +1,19 @@
+# Versioning and metadata
+.git
+.gitignore
+.dockerignore
+
+# Build dependencies
+dist
+node_modules
+coverage
+
+# Environment (contains sensitive data)
+.env
+.dockerignore
+Dockerfile
+node_modules
+npm-debug.log
+README.md
+Makefile
+docker-compose.yml
