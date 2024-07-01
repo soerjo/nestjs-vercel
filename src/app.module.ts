@@ -1,12 +1,10 @@
 import { MiddlewareConsumer, Module } from '@nestjs/common';
-import { APP_FILTER, APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
+import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
 import { MulterModule } from '@nestjs/platform-express';
 import { LoggerModule } from 'nestjs-pino';
 import { pinoConfig } from './config/logger.config';
 import { GlobalModule } from './modules/global.module';
 import { HttpExceptionFilter } from './shared/filter/http-exception.filter';
-import { BasicAuthGuard } from './shared/guards/basic-auth.guard';
-import { RolesGuard } from './shared/guards/role.guard';
 import { ResponseInterceptor } from './shared/interceptors/response.interceptor';
 import { LoggerMiddleware } from './shared/middleware/logger.middleware';
 import { RequestMiddleware } from './shared/middleware/request.middleware';
@@ -33,14 +31,14 @@ import { RequestMiddleware } from './shared/middleware/request.middleware';
   ],
   controllers: [],
   providers: [
-    {
-      provide: APP_GUARD,
-      useClass: BasicAuthGuard,
-    },
-    {
-      provide: APP_GUARD,
-      useClass: RolesGuard,
-    },
+    // {
+    //   provide: APP_GUARD,
+    //   useClass: BasicAuthGuard,
+    // },
+    // {
+    //   provide: APP_GUARD,
+    //   useClass: RolesGuard,
+    // },
     {
       provide: APP_FILTER,
       useClass: HttpExceptionFilter,

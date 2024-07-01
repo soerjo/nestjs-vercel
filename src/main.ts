@@ -44,9 +44,7 @@ async function bootstrap() {
   app.useGlobalInterceptors(new LoggerErrorInterceptor());
 
   // Documentation
-  if (process.env.NODE_ENV === 'development') {
-    setupSwagger(app);
-  }
+  setupSwagger(app);
 
   // Disable Cache ETag
   app.disable('etag');
